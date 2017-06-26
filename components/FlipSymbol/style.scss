@@ -1,0 +1,25 @@
+.flip_symbol{
+  height: 28px;
+  width: 22px;
+  text-align: center;
+  background: linear-gradient(to top, #234447, #396d72);
+  border: 1px solid #213e41;
+  border-collapse: collapse;
+  padding: 3px;
+  color: #feffff;
+  font-family: Assistant;
+  font-size: 24px;
+}
+
+.flip_symbol:before{
+  position: absolute;
+  width: inherit;
+  height: 1px;
+  // top:50%;
+  // left:0;
+  content:'';
+  background-color: #213e41;
+  top: 32px;
+  margin-left: -5px;
+
+}

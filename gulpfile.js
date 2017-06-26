@@ -26,7 +26,7 @@ gulp.task('BS', () => {
 })
 
 gulp.task('styles', (done) => {
-  gulp.src('components/**/*.scss')
+  gulp.src(['components/**/*.scss','client/**/*.scss'])
   .pipe($.postcss(plugins, { parser: scss }))
   .pipe($.concat('app.css'))
   .pipe(gulp.dest('./static/'));
@@ -34,7 +34,7 @@ gulp.task('styles', (done) => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('components/**/*.scss', gulp.series('styles'));
+  gulp.watch(['components/**/*.scss','client/**/*.scss'], gulp.series('styles'));
 });
 
 gulp.task('default', gulp.parallel('styles'));
